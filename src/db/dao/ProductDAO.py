@@ -1,5 +1,5 @@
 from src.db.DBController import *
-from src.db.util.QueryStringFile import *
+from src.util.QueryStringFile import *
 
 
 def create_table_product():

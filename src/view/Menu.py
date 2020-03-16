@@ -1,5 +1,18 @@
-from src.model.Product import Product
+from src.util.StringFile import *
 
-product = Product("1", "White potion", "123456789", "1000", "1.700", "test.com")
 
-print("Produto", product.description)
+def init():
+    looper()
+
+
+def looper():
+    show_options()
+    get_input()
+
+
+def show_options():
+    print(menu_options)
+
+
+def get_input():
+    return input(menu_input)

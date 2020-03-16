@@ -1,4 +1,5 @@
 from src.db.dao import ProductDAO
+from src.view import Menu
 
 
 def createEntity():
@@ -7,6 +8,7 @@ def createEntity():
 
 def start():
     createEntity()
+    Menu.init()
 
 
 def main():
