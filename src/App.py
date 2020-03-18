@@ -1,19 +1,13 @@
-from src.db.dao import ProductDAO
-from src.view import Menu
+from src.db import EntityController
+from src.presentation.PresentationView import PresentationView
 
 
-def createEntity():
-    ProductDAO.start()
+class App:
 
+    def main(self):
+        self.__start()
 
-def start():
-    createEntity()
-    Menu.init()
-
-
-def main():
-    start()
-
-
-if __name__ == '__main__':
-    main()
+    @staticmethod
+    def __start():
+        EntityController.create_entities()
+        PresentationView().init()
