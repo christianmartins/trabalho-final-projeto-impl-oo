@@ -1,4 +1,4 @@
-querycreatetableproduct = "CREATE TABLE IF NOT EXISTS product (" \
+query_create_table_product = "CREATE TABLE IF NOT EXISTS product (" \
                           "cod integer PRIMARY KEY, " \
                           "description text NOT NULL," \
                           "ean text NOT NULL," \
@@ -7,4 +7,4 @@ querycreatetableproduct = "CREATE TABLE IF NOT EXISTS product (" \
                           "url text)"
 
 # Select
-queryselectproduct = "SELECT * FROM product;"
+query_select_product = "SELECT * FROM product;"

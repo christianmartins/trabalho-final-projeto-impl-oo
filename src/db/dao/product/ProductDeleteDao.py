@@ -1,5 +1,9 @@
+from src.db.dao.BaseCrudDao import BaseCrudDao
 
-class ProductDeleteDao:
+
+class ProductDeleteDao(BaseCrudDao):
+    def __init__(self):
+        super()
 
     @staticmethod
     def delete_all():

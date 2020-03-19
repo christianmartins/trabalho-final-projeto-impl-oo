@@ -4,10 +4,10 @@ from src.presentation.PresentationView import PresentationView
 
 class App:
 
-    def main(self):
-        self.__start()
-
     @staticmethod
-    def __start():
+    def start():
         EntityController().create_entities()
         PresentationView().init()
+
+    def main(self):
+        self.start()

@@ -14,13 +14,16 @@ class CrudMenu:
                 break
             self.__on_select_option()
 
-    def __on_select_option(self):
+    @staticmethod
+    def __on_select_option():
         print("test")
 
-    def __show_options(self):
+    @staticmethod
+    def __show_options():
         print(menu_options)
 
-    def __get_input(self):
+    @staticmethod
+    def __get_input():
         try:
             return int(input(menu_input))
         except NameError:
