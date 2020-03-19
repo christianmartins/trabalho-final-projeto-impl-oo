@@ -1,3 +1,5 @@
+import sqlite3
+
 from src.db.EntityController import EntityController
 from src.model.Product import Product
 from src.presentation.console.menu.BaseMenu import BaseMenu
@@ -21,8 +23,21 @@ class MenuCreate(BaseMenu):
         url = self.get_string_input(StringFileUtil.input_msg_product_url)
         return Product(cod, description, ean, stock, price, url)
 
-    @staticmethod
-    def save_product(product: Product):
-        EntityController.get_instance().product_dao.get_create().insert(product)
-        print(EntityController.get_instance().product_dao.get_read().get_list())
+    def save_product(self, product: Product):
+        try:
+            cod_has_exists = self.get_read_dao().check_cod_has_exists(product.cod)
+            if cod_has_exists:
+                print(StringFileUtil.cod_has_exists)
+            else:
+                self.get_create_dao().insert(product)
+                print(StringFileUtil.successful_execute)
+        except sqlite3.Error:
+            print(StringFileUtil.failed_execute)
 
+    @staticmethod
+    def get_create_dao():
+        return EntityController.get_instance().get_product_dao().get_create()
+
+    @staticmethod
+    def get_read_dao():
+        return EntityController.get_instance().get_product_dao().get_read()
