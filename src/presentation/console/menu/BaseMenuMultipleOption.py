@@ -1,6 +1,6 @@
 from src.presentation.console.menu.BaseMenu import BaseMenu
 from src.util import InputUtil
-from src.util.StringFileUtil import method_not_implemented, finish_application
+from src.util.StringFileUtil import method_not_implemented
 
 
 class BaseMenuMultipleOption(BaseMenu):
@@ -15,9 +15,8 @@ class BaseMenuMultipleOption(BaseMenu):
             self.show_options(self.get_options_menu())
             option_select = self.get_int_input(self.get_msg_input())
             if option_select == 0:
-                self.show_message_on_finish_application()
-                break
-            self.on_select_option()
+                self.finish_application()
+            self.on_select_option(option_select)
 
     @staticmethod
     def show_options(options_text):
@@ -34,10 +33,5 @@ class BaseMenuMultipleOption(BaseMenu):
         raise NotImplementedError(method_not_implemented)
 
     @staticmethod
-    def on_select_option():
+    def on_select_option(option):
         raise NotImplementedError(method_not_implemented)
-
-    @staticmethod
-    def show_message_on_finish_application():
-        print(finish_application)
-

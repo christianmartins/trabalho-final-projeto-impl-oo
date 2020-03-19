@@ -8,3 +8,7 @@ query_create_table_product = "CREATE TABLE IF NOT EXISTS product (" \
 
 # Select
 query_select_product = "SELECT * FROM product;"
+
+# Select
+# query_insert_product = "INSERT INTO product(cod, description, ean, stock, price, url) VALUES(?,?,?,?,?,?)"
+query_insert_product = 'INSERT INTO product VALUES(?,?,?,?,?,?)'

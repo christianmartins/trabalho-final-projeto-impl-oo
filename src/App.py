@@ -6,7 +6,7 @@ class App:
 
     @staticmethod
     def start():
-        EntityController().create_entities()
+        EntityController.get_instance().create_entities()
         PresentationView().init()
 
     def main(self):

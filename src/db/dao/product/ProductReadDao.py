@@ -10,6 +10,6 @@ class ProductReadDao(BaseCrudDao):
         return self.__get_list(query_select_product)
 
     def __get_list(self, query):
-        self.db.get_cursor().execute(query)
-        return self.db.get_cursor().fetchall()
+        self.get_cursor().execute(query)
+        return self.get_cursor().fetchall()
 

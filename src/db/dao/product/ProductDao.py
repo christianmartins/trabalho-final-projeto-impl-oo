@@ -11,19 +11,18 @@ class ProductDao:
     deleteDao = ProductDeleteDao()
 
     def start(self):
-        self.getCreate().create_table()
-        print(self.getRead().get_list())
+        self.get_create().create_table()
 
-    def getCreate(self):
+    def get_create(self):
         return self.createDao
 
-    def getRead(self):
+    def get_read(self):
         return self.readDao
 
-    def getUpdate(self):
+    def get_update(self):
         return self.updateDao
 
-    def getDelete(self):
+    def get_delete(self):
         return self.deleteDao
 
 

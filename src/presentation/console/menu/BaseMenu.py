@@ -1,5 +1,5 @@
 from src.util import InputUtil
-from src.util.StringFileUtil import method_not_implemented, finish_application
+from src.util.StringFileUtil import method_not_implemented, finish_msg_application, invalid_input
 
 
 class BaseMenu:
@@ -21,3 +21,15 @@ class BaseMenu:
     @staticmethod
     def get_double_input(msg):
         return InputUtil.get_double_input(msg)
+
+    def finish_application(self):
+        self.show_message_on_finish_application()
+        exit()
+
+    @staticmethod
+    def show_message_on_finish_application():
+        print(finish_msg_application)
+
+    @staticmethod
+    def show_message_invalid_input():
+        print(invalid_input)

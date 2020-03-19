@@ -1,8 +1,8 @@
 # BaseMenu
 menu_input = "DIGITE A OPÇÃO DESEJADA: "
-finish_application = "FINALIZANDO A APLICAÇÃO..."
+finish_msg_application = "FINALIZANDO A APLICAÇÃO..."
 method_not_implemented = "IMPLEMENT THIS METHOD!"
-
+invalid_input = "Input inválido!"
 # Menu
 menu_options = "========= CADASTRO DE PRODUTOS =========\n" \
                "0 - SAIR\n" \
