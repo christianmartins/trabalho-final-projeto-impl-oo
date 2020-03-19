@@ -1,3 +1,5 @@
+import sqlite3
+
 from src.db.EntityController import EntityController
 from src.model.Product import Product
 from src.presentation.console.menu.BaseMenu import BaseMenu
@@ -21,8 +23,13 @@ class MenuCreate(BaseMenu):
         url = self.get_string_input(StringFileUtil.input_msg_product_url)
         return Product(cod, description, ean, stock, price, url)
 
-    @staticmethod
-    def save_product(product: Product):
-        EntityController.get_instance().product_dao.get_create().insert(product)
-        print(EntityController.get_instance().product_dao.get_read().get_list())
+    def save_product(self, product: Product):
+        try:
+            self.get_create_dao().insert(product)
+            print(StringFileUtil.successful_save)
+        except sqlite3.Error:
+            print(StringFileUtil.failed_save)
 
+    @staticmethod
+    def get_create_dao():
+        return EntityController.get_instance().get_product_dao().get_create()

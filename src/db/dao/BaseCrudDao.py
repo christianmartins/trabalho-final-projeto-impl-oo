@@ -1,14 +1,14 @@
-from src.db.EntityController import EntityController
+from src.db.DBConnection import DBConnection
 
 
 class BaseCrudDao:
-    __entity_controller = EntityController.get_instance()
+    __db = DBConnection()
 
     def get_connection(self):
-        return self.__entity_controller.get_db().get_connection()
+        return self.__db.get_connection()
 
     def get_cursor(self):
-        return self.get_connection().get_cursor()
+        return self.__db.get_cursor()
 
     def commit(self):
         self.get_connection().commit()

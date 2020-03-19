@@ -19,3 +19,8 @@ input_msg_product_ean = "Insira o codigo de barra do produto: "
 input_msg_product_stock = "Insira o estoque do produto: "
 input_msg_product_price = "Insira o preço do produto: "
 input_msg_product_url = "Insira a url da imagem do produto: "
+successful_save = "Salvo com sucesso"
+failed_save = "Salvo com sucesso"
+
+# MenuRead
+all_title_list = "========= LISTAGEM DE PRODUTOS ========="
