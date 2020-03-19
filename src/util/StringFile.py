@@ -1,4 +1,5 @@
-menu_options = "0 - SAIR\n" \
+menu_options = "========= CADASTRO DE PRODUTOS =========" \
+               "0 - SAIR\n" \
                "1 - CADASTRAR PRODUTO\n" \
                "2 - CONSULTAR PRODUTO\n" \
                "3 - DELETAR PRODUTO\n" \
@@ -6,4 +7,6 @@ menu_options = "0 - SAIR\n" \
 
 menu_input = "DIGITE A OPÇÃO DESEJADA: "
 
-method_not_implemented = "Please Implement this method"
+finish_application = "FINALIZANDO A APLICAÇÃO..."
+
+method_not_implemented = "IMPLEMENT THIS METHOD!"

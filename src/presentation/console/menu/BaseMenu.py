@@ -1,6 +1,5 @@
-from abc import ABC
-
-from src.util.StringFile import method_not_implemented
+from src.util import InputUtil
+from src.util.StringFile import method_not_implemented, finish_application
 
 
 class BaseMenu:
@@ -11,30 +10,31 @@ class BaseMenu:
     def __looping(self):
         while True:
             self.show_options(self.get_options_menu())
-            option_select = self.get_int_input(self.get_msg_input())
-            print(option_select)
+            option_select = self.get_input(self.get_msg_input())
             if option_select == 0:
+                self.show_message_on_finish_application()
                 break
             self.on_select_option()
-
-    def get_options_menu(self):
-        raise NotImplementedError(method_not_implemented)
-
-    def get_msg_input(self):
-        raise NotImplementedError(method_not_implemented)
 
     @staticmethod
     def show_options(options_text):
         print(options_text)
 
+    def get_options_menu(self):
+        raise NotImplementedError(method_not_implemented)
+
     @staticmethod
-    def get_int_input(msg):
-        try:
-            return int(input(msg))
-        except ValueError:
-            return 0
+    def get_input(msg):
+        return InputUtil.get_int_input(msg)
+
+    def get_msg_input(self):
+        raise NotImplementedError(method_not_implemented)
 
     @staticmethod
     def on_select_option():
         raise NotImplementedError(method_not_implemented)
+
+    @staticmethod
+    def show_message_on_finish_application():
+        print(finish_application)
 
