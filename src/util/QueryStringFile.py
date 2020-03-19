@@ -6,4 +6,5 @@ querycreatetableproduct = "CREATE TABLE IF NOT EXISTS product (" \
                           "price double NOT NULL, " \
                           "url text)"
 
+# Select
 queryselectproduct = "SELECT * FROM product;"

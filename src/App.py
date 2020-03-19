@@ -1,4 +1,4 @@
-from src.db import EntityController
+from src.db.EntityController import EntityController
 from src.presentation.PresentationView import PresentationView
 
 
@@ -9,5 +9,5 @@ class App:
 
     @staticmethod
     def __start():
-        EntityController.create_entities()
+        EntityController().create_entities()
         PresentationView().init()

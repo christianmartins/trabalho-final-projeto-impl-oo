@@ -1,5 +1,8 @@
-from src.db.dao import ProductDAO
+from src.db.dao.product import ProductDao
 
 
-def create_entities():
-    ProductDAO.start()
+class EntityController:
+
+    @staticmethod
+    def create_entities():
+        ProductDao.start()

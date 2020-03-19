@@ -3,5 +3,6 @@ from src.presentation.console.menu.CrudMenu import CrudMenu
 
 class PresentationView:
 
-    def init(self):
+    @staticmethod
+    def init():
         CrudMenu().init()
