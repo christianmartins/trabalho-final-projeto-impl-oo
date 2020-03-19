@@ -25,3 +25,9 @@ failed_save = "Erro ao salvar"
 
 # MenuRead
 all_title_list = "========= LISTAGEM DE PRODUTOS ========="
+
+# MenuDelete
+delete_title = "========= APAGAR PRODUTO POR ID ========="
+
+# MenuUpdate
+update_title = "========= ATUALIZAR PRODUTOS POR ID ========="
