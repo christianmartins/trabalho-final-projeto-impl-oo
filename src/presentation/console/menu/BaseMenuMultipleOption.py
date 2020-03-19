@@ -4,6 +4,8 @@ from src.util.StringFileUtil import method_not_implemented
 
 
 class BaseMenuMultipleOption(BaseMenu):
+    is_continue = True
+
     def __init__(self):
         super()
 
@@ -11,7 +13,7 @@ class BaseMenuMultipleOption(BaseMenu):
         self.__looping()
 
     def __looping(self):
-        while True:
+        while self.is_continue:
             self.show_options(self.get_options_menu())
             option_select = self.get_int_input(self.get_msg_input())
             if option_select == 0:

@@ -1,5 +1,6 @@
 from src.presentation.console.menu.BaseMenuMultipleOption import BaseMenuMultipleOption
 from src.presentation.console.menu.MenuCreate import MenuCreate
+from src.presentation.console.menu.MenuDelete import MenuDelete
 from src.presentation.console.menu.MenuRead import MenuRead
 from src.util.StringFileUtil import *
 
@@ -18,7 +19,9 @@ class Menu(BaseMenuMultipleOption):
     def on_select_option(self, option):
         if option == 1:
             MenuCreate().init()
-        if option == 2:
+        elif option == 2:
             MenuRead().init()
+        elif option == 3:
+            MenuDelete().init()
         else:
             self.show_message_invalid_input()

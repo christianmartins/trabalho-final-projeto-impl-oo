@@ -8,11 +8,11 @@ query_create_table_product = "CREATE TABLE IF NOT EXISTS product (" \
 
 # Select
 query_select_product = "SELECT * FROM product;"
-query_check_product_id_has_exists = "SELECT COUNT(*) > 0 FROM product WHERE COD=?;"
+query_check_product_id_has_exists = "SELECT COUNT(*) > 0 FROM product WHERE cod=?;"
 
 # Insert
 query_insert_product = 'INSERT INTO product VALUES(?,?,?,?,?,?)'
 
 # Delete
-query_delete_all_products = 'DELETE * FROM product'
-query_delete_by_cod = 'DELETE * FROM product WHERE cod=?;'
+query_delete_all_products = 'DELETE FROM product'
+query_delete_by_cod = 'DELETE FROM product WHERE cod=?;'

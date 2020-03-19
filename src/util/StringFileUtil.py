@@ -19,15 +19,19 @@ input_msg_product_ean = "Insira o codigo de barra do produto: "
 input_msg_product_stock = "Insira o estoque do produto: "
 input_msg_product_price = "Insira o preço do produto: "
 input_msg_product_url = "Insira a url da imagem do produto: "
-cod_has_exists = "Esse codigo já foi cadastrado!.\nUse outro!"
-successful_save = "Salvo com sucesso"
-failed_save = "Erro ao salvar"
+cod_has_exists = "Esse codigo já foi cadastrado!"
+cod_not_exists = "Esse codigo não foi cadastrado!"
+successful_execute = "Executado com sucesso!"
+failed_execute = "Ocorreu um erro na execução!"
 
 # MenuRead
 all_title_list = "========= LISTAGEM DE PRODUTOS ========="
 
 # MenuDelete
-delete_title = "========= APAGAR PRODUTO POR ID ========="
-
+delete_title_options = "========= APAGAR PRODUTOS =========\n" \
+                       "0 - SAIR\n" \
+                       "1 - POR CODIGO\n" \
+                       "2 - TODOS\n"
+delete_all_msg = "Limpando dados..."
 # MenuUpdate
 update_title = "========= ATUALIZAR PRODUTOS POR ID ========="

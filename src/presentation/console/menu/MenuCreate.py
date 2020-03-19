@@ -30,9 +30,9 @@ class MenuCreate(BaseMenu):
                 print(StringFileUtil.cod_has_exists)
             else:
                 self.get_create_dao().insert(product)
-                print(StringFileUtil.successful_save)
+                print(StringFileUtil.successful_execute)
         except sqlite3.Error:
-            print(StringFileUtil.failed_save)
+            print(StringFileUtil.failed_execute)
 
     @staticmethod
     def get_create_dao():
