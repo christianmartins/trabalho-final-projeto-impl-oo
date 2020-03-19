@@ -5,3 +5,5 @@ menu_options = "0 - SAIR\n" \
                "4 - ATUALIZAR PRODUTO\n"
 
 menu_input = "DIGITE A OPÇÃO DESEJADA: "
+
+method_not_implemented = "Please Implement this method"

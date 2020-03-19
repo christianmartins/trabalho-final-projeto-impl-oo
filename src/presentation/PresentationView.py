@@ -1,8 +1,8 @@
-from src.presentation.console.menu.CrudMenu import CrudMenu
+from src.presentation.console.menu.Menu import Menu
 
 
 class PresentationView:
 
     @staticmethod
     def init():
-        CrudMenu().init()
+        Menu().init()
