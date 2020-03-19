@@ -1,5 +1,5 @@
 from src.db.dao.BaseCrudDao import BaseCrudDao
-from src.util.QueryStringFile import query_select_product
+from src.util.QueryStringFileUtil import query_select_product
 
 
 class ProductReadDao(BaseCrudDao):

@@ -1,10 +1,11 @@
-from src.presentation.console.menu.BaseMenu import BaseMenu
-from src.util.StringFile import *
+from src.presentation.console.menu.BaseMenuMultipleOption import BaseMenuMultipleOption
+from src.util.StringFileUtil import *
 
 
-class Menu(BaseMenu):
+class Menu(BaseMenuMultipleOption):
     def __init__(self):
         super()
+        super().__init__()
 
     def get_options_menu(self):
         return menu_options

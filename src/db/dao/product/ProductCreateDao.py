@@ -1,5 +1,5 @@
 from src.db.dao.BaseCrudDao import BaseCrudDao
-from src.util.QueryStringFile import query_create_table_product
+from src.util.QueryStringFileUtil import query_create_table_product
 
 
 class ProductCreateDao(BaseCrudDao):
