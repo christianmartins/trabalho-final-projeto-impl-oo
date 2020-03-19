@@ -25,11 +25,19 @@ class MenuCreate(BaseMenu):
 
     def save_product(self, product: Product):
         try:
-            self.get_create_dao().insert(product)
-            print(StringFileUtil.successful_save)
+            cod_has_exists = self.get_read_dao().check_cod_has_exists(product.cod)
+            if cod_has_exists:
+                print(StringFileUtil.cod_has_exists)
+            else:
+                self.get_create_dao().insert(product)
+                print(StringFileUtil.successful_save)
         except sqlite3.Error:
             print(StringFileUtil.failed_save)
 
     @staticmethod
     def get_create_dao():
         return EntityController.get_instance().get_product_dao().get_create()
+
+    @staticmethod
+    def get_read_dao():
+        return EntityController.get_instance().get_product_dao().get_read()

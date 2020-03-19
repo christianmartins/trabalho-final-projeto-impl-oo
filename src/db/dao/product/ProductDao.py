@@ -5,24 +5,24 @@ from src.db.dao.product.ProductUpdateDao import ProductUpdateDao
 
 
 class ProductDao:
-    createDao = ProductCreateDao()
-    readDao = ProductReadDao()
-    updateDao = ProductUpdateDao()
-    deleteDao = ProductDeleteDao()
+    __createDao = ProductCreateDao()
+    __readDao = ProductReadDao()
+    __updateDao = ProductUpdateDao()
+    __deleteDao = ProductDeleteDao()
 
     def start(self):
         self.get_create().create_table()
 
     def get_create(self):
-        return self.createDao
+        return self.__createDao
 
     def get_read(self):
-        return self.readDao
+        return self.__readDao
 
     def get_update(self):
-        return self.updateDao
+        return self.__updateDao
 
     def get_delete(self):
-        return self.deleteDao
+        return self.__deleteDao
 
 
