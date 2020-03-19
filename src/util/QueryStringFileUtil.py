@@ -16,3 +16,6 @@ query_insert_product = 'INSERT INTO product VALUES(?,?,?,?,?,?)'
 # Delete
 query_delete_all_products = 'DELETE FROM product'
 query_delete_by_cod = 'DELETE FROM product WHERE cod=?;'
+
+# Update
+query_update_product = 'UPDATE product SET description=?, ean=?, stock=?, price=?, url=? WHERE cod=?;'
